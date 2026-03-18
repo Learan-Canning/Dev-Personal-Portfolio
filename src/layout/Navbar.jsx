@@ -7,9 +7,9 @@ const navLinks = [
 
 export const Navbar = () => {
     return (
-        <header>
-            <nav>
-                <a>
+        <header className="fixed top-0 left-0 right-0 bg-transparent py-5">
+            <nav className="container mx-auto px-6 flex items-center justify-between">
+                <a href="#" className="text-xl font-bold tracking-tight hover:text-primary">
                     PM<span>.</span>
                 </a>
                 {/* Desktop Nav */}
