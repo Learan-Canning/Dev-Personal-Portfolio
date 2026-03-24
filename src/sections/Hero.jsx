@@ -1,5 +1,7 @@
 import { Button } from "@/components/Button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+
 
 
 export const Hero = () => {
@@ -61,11 +63,15 @@ export const Hero = () => {
                     </div>   
 
                     {/* CTA Buttons */}
-                    <div>
-                        <Button size="lg">Contact Me <ArrowRight className="w-5 h-5"/></Button>
-
+                    <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+                        <Button size="lg">
+                            Contact Me <ArrowRight className="w-5 h-5" />
+                        </Button>
+                        <AnimatedBorderButton>
+                            <Download className="w-5 h-5" />
+                            Download CV
+                        </AnimatedBorderButton>
                     </div>
-
                     {/* Right Column - Image */}
 
                 </div>
