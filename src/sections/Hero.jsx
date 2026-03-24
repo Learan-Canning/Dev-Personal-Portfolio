@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Facebook, Github, Linkedin } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 
@@ -72,8 +72,25 @@ export const Hero = () => {
                             Download CV
                         </AnimatedBorderButton>
                     </div>
-                    {/* Right Column - Image */}
 
+                    { /* Social Links */ }
+                    <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+                        <span className="text-sm text-muted-foreground">Follow Me: </span>
+                        {[
+                            {icon: Github, href:"https://github.com/learan-canning/"},
+                            {icon: Linkedin, href:"https://www.linkedin.com/in/learan-canning/"},
+                            {icon: Facebook, href:"https://www.facebook.com/profile.php?id=61588159460486&sk=directory_basic_info&locale=en_GB"},
+                        ].map((social, idx) => (
+                            <a key={idx} 
+                            href={social.href} 
+                            className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary hover:border-primary/50 transition-all duration-300">
+                                {<social.icon  className="w-5 h-5"/>}
+                            </a>
+                        ))}
+                    </div>
+
+                    {/* Right Column - Image */}
+                    
                 </div>
             </div>
         </section>
