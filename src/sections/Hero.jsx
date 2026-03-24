@@ -1,3 +1,7 @@
+import { Button } from "@/components/Button";
+import { ArrowRight } from "lucide-react";
+
+
 export const Hero = () => {
     return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -14,7 +18,7 @@ export const Hero = () => {
             { /* dots */ }
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {[...Array(30)].map((_, i) => (
-                    <div className="absolute w-1 h-1 rounded-full opacity-20" 
+                    <div key={i} className="absolute w-1 h-1 rounded-full opacity-20" 
                         style={{
                             backgroundColor: "#04d9ff",
                             left: `${Math.random() * 100}%`,
@@ -41,22 +45,29 @@ export const Hero = () => {
                     </div>
 
                     {/* Headline */}
-                    <div>
-                        <h1>
+                    <div className="space-y-4">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animate-delay-100">
                             Creating <span className="text-primary glow-text">Digital</span>
                             <br />
                             Solutions, one line of
-                            <br />
-                            <span className="font-serif italic font-normal text-white">Code at a time </span>
                             
-                            
-                            
+                            <span className="font-serif italic font-normal text-white"> Code, at a time.
+                            </span>
                         
-
                         </h1>
+                        <p className="mt-6 text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+                         Hey, I'm Learan Canning. I'm a full-stack Developer building real-world web applications across both front-end and back-end. I’m passionate about crafting seamless user experiences and writing clean, efficient code.
+                         </p>   
                     </div>   
-                    
+
+                    {/* CTA Buttons */}
+                    <div>
+                        <Button size="lg">Contact Me <ArrowRight className="w-5 h-5"/></Button>
+
+                    </div>
+
                     {/* Right Column - Image */}
+
                 </div>
             </div>
         </section>
